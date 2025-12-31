@@ -6,6 +6,9 @@ apps/web/node_modules/
 # Next.js
 apps/web/.next/
 
+# Hono
+apps/api/dist/
+
 # Yarn / PnP (even if you don't use it, nbd)
 .pnp
 .pnp.*
