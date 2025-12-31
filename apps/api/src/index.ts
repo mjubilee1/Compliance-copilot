@@ -1,15 +1,17 @@
+// apps/api/src/index.ts
+import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
 
 const app = new Hono();
 
-app.get('/health', (c) => c.text('ok'));
+// Simple health check route
+app.get('/', (c) => c.json({ ok: true, service: 'compliance-api' }));
 
-app.get('/', (c) =>
-  c.json({
-    ok: true,
-    service: 'api',
-    time: new Date().toISOString(),
-  })
-);
+const port = Number(process.env.PORT) || 4000;
 
-export default app;
+console.log(`🚀 API listening on http://localhost:${port}`);
+
+serve({
+  fetch: app.fetch,
+  port,
+});
