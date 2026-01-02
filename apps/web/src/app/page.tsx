@@ -20,14 +20,14 @@ export default function Home() {
 
           <div className="flex items-center gap-2 text-sm">
             <Link
-              href="/chat"
+              href="/copilot"
               className="text-muted-foreground hover:text-foreground"
             >
               Open Copilot
             </Link>
             <Separator orientation="vertical" className="h-4" />
             <Button size="sm" asChild>
-              <Link href="/chat">Start demo</Link>
+              <Link href="/copilot">Start demo</Link>
             </Button>
           </div>
         </header>
