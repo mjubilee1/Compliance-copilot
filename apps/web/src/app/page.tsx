@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 export default function Home() {
+  console.log('enter here')
   return (
     <div className="min-h-screen bg-muted/30 flex justify-center px-4 py-10">
       <main className="w-full max-w-5xl space-y-10">
