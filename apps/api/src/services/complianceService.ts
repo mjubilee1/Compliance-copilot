@@ -97,7 +97,7 @@ Message from agent:
 `;
 
   // Using Responses API with JSON schema – adjust model if you prefer
-  const response = await openai.responses.create({
+  const response: any = await openai.responses.create({
     model: 'gpt-4.1-mini',
     input: prompt,
     max_output_tokens: 800,
